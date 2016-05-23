@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.esquel.cordovaHelloWorld"
+      version="1.0.0">
+    <name>CordovaHelloWorld</name>
+    <description>Alter for Cordova</description>
+    <license>MIT</license>
+    <keywords>cordova,cordovaHelloWorld</keywords>
+
+    <js-module src="www/cordovaHelloWorld.js" name="CordovaHelloWorld">
+        <clobbers target="CordovaHelloWorld" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaHelloWorld" >
+                <param name="android-package" value="com.esquel.cordovaHelloWorld.CordovaHelloWorld"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CordovaHelloWorld.java" target-dir="src/com/esquel/cordovaHelloWorld" />
+    </platform>
+</plugin>
